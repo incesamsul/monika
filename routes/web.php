@@ -55,6 +55,7 @@ Route::group(['middleware' => ['auth', 'ceklevel:pegawai']], function () {
     Route::group(['prefix' => 'pegawai'], function () {
         // GET REQUEST
         Route::get('/upload_berkas', [Pegawai::class, 'uploadBerkas']);
+        Route::get('/hapus_berkas/{id_berkas}', [Pegawai::class, 'hapusBerkas']);
         Route::post('/create_upload_berkas', [Pegawai::class, 'createUploadBerkas']);
         Route::get('/tugas', [Pegawai::class, 'tugas']);
     });

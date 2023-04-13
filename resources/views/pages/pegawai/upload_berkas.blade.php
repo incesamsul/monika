@@ -63,6 +63,10 @@
                                                                             href="{{ asset('data/berkas/' . $berkas->berkas) }}"
                                                                             class="badge badge-primary"><i
                                                                                 class="fas fa-file"></i></a>
+                                                                        <a onclick="return confirm('yakin?')"
+                                                                            href="{{ URL::to('/pegawai/hapus_berkas/' . $berkas->id_berkas) }}"
+                                                                            class="badge badge-danger"><i
+                                                                                class="fas fa-trash"></i></a>
                                                                     </p>
                                                                 @endif
                                                             </li>

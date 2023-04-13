@@ -45,4 +45,11 @@ class Pegawai extends Controller
 
         return redirect()->back()->with('message', 'berkasi Berhasil di upload');
     }
+
+
+    public function hapusBerkas($idBerkas)
+    {
+        BerkasModel::where('id_berkas', $idBerkas)->delete();
+        return redirect()->back()->with('message', 'berkasi Berhasil di hapus');
+    }
 }
